@@ -15,16 +15,18 @@ if (mysqli_num_rows($r) > 0) {
         echo '
 <div class="col-md-3 d-flex justify-content-center">
     <div class="card" style="width: 18rem;">
-	 <img src=' . $row['item_img'] . ' class="card-img-top" alt="image">
+	 <img src=' . $row['item_img'] . ' class="card-img-top" alt="image" style="object-fit:cover;height: 280px;">
 	  <div class="card-body">
 	   <h5 class="card-title text-center">' . $row['item_name'] . '</h5>
 	   <p class="card-text">' . $row['item_desc'] . '</p>
      </div>
 	  <ul class="list-group list-group-flush">
-	   <li class="list-group-item"><p class="text-center">&pound' . $row['item_price'] . '</p></li>
-	   <li class="list-group-item btn btn-dark"><a class="btn btn-dark btn-lg btn-block" href="update.php?id=' . $row['item_id'] . '">
-	   Update Item</a></li>
-	   <li class="list-group-item btn btn-dark"><a class="btn btn-dark btn-lg btn-block" href="delete.php?item_id=' . $row['item_id'] . '">
+	   <li class="list-group-item"><h5 class="text-center">&pound' . $row['item_price'] . '</h5></li>
+
+	   <li class="list-group-item btn">
+	   <a class="btn btn-dark btn-lg btn-block" href="update.php?id=' . $row['item_id'] . '">
+	   Update Item</a>
+	   <a class="btn btn-danger btn-lg btn-block" href="delete.php?item_id=' . $row['item_id'] . '">
 	   Delete Item</a></li>
 	  </ul>
 	</div>
@@ -36,6 +38,6 @@ if (mysqli_num_rows($r) > 0) {
 # Close database connection.
 mysqli_close($link);
 
-include('Includes/footer.html');
+include('../Includes/footer.html');
 ?>
 
