@@ -15,7 +15,7 @@ if (mysqli_num_rows($r) > 0) {
         echo '
 <div class="col-md-3 d-flex justify-content-center">
     <div class="card" style="width: 18rem;">
-	 <img src=' . $row['item_img'] . ' class="card-img-top" alt="image" style="object-fit:cover;height: 280px;">
+	 <img src=' . $row['item_img'] . ' class="card-img-top" alt="image" style="object-fit:cover;height: 240px;">
 	  <div class="card-body">
 	   <h5 class="card-title text-center">' . $row['item_name'] . '</h5>
 	   <p class="card-text">' . $row['item_desc'] . '</p>
