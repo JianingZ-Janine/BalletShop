@@ -104,7 +104,7 @@ if (empty($errors)) {
 	 name="item_price" 
 	 min="0" step="0.01" 
 	 required 
-	 value="<?php if (isset($_POST['item_price'])) echo $_POST['item_price']; ?>">
+	 value="<?php if (isset($_POST['item_price'])) echo $_POST['item_price']; ?>"><br>
 	  <!-- submit button -->
      <input type="submit" class="btn btn-dark" value="Submit">
 	</form>
