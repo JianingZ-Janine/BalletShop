@@ -26,7 +26,9 @@ $total = 0;
 if (!empty($_SESSION['cart']))
 {
   # Connect to the database.
+  ob_start();
   require ('../Includes/connect_db.php');
+  ob_end_clean(); // discard the output 'Connected to the database successfully!'
 
   # Retrieve all items in the cart from the 'products' database table.
   $q = "SELECT * FROM products WHERE item_id IN (";
@@ -115,6 +117,6 @@ else
 
 
 # Display footer section.
-include('Includes/footer.html');
+include('../Includes/footer.html');
 
 ?>
