@@ -7,7 +7,7 @@ include('../Includes/nav.html');
 <?php
 # Open database connection.
 ob_start();
-require('connect_db.php');
+require('../Includes/connect_db.php');
 ob_end_clean(); // discard the output 'Connected to the database successfully!' 
 ?>
 

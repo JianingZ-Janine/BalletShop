@@ -1,11 +1,11 @@
 <?php
 
-include('Includes/session-cart.php');
+include('../BalletShop/Includes/session-cart.php');
 
 if (isset($_GET['id']))
     $id = $_GET['id'];
 
-require('Includes/connect_db.php');
+require('../BalletShop/Includes/connect_db.php');
 
 $q = "SELECT * FROM products WHERE item_id = $id";
 $r = mysqli_query($link, $q);

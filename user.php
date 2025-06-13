@@ -1,13 +1,13 @@
 <?php
 session_start();
-include('../Includes/session-cart.php');
+include('../BalletShop/Includes/session-cart.php');
 ?>
 
 
 <?php
 # Open database connection.
 ob_start();
-require('connect_db.php');
+require('../BalletShop/Includes/connect_db.php');
 ob_end_clean(); // discard the output 'Connected to the database successfully!' 
 ?>
 
