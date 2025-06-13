@@ -66,15 +66,11 @@ if (!empty($_SESSION['cart']))
 				 alt=\"Cotton T-shirt\">
 		    </div>
 			<div class=\"col-md-3 col-lg-3 col-xl-3\">
-             <h6 class=\"text-muted\">Shirt</h6>
              <h6 class=\"text-black mb-0\">{$row['item_name']}</h6>
             </div>
 			<div class=\"col-md-3 col-lg-3 col-xl-2 d-flex\">
              <input type=\"text\" size=\"3\" name=\"qty[{$row['item_id']}]\" value=\"{$_SESSION['cart'][$row['item_id']]['quantity']}\"></td>
 			</div>
-			<div class=\"col-md-3 col-lg-2 col-xl-2\">
-              <h6 class=\"text-muted\">@ {$row['item_price']}</h6>
-            </div>
 			<div class=\"col-md-3 col-lg-2 col-xl-2\">
 			<h6 class=\"mb-0\"> &pound ".number_format ($subtotal, 2)."</h6> 
 			</div>

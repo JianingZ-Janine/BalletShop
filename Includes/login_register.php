@@ -31,7 +31,9 @@ if (isset($_POST['login'])) {
         $users = $result->fetch_assoc();
         if (password_verify($pass, $users['pass'])) {
             $_SESSION['first_name'] = $users['first_name'];
+            $_SESSION['last_name'] = $users['last_name'];
             $_SESSION['email'] = $users['email'];
+            $_SESSION['user_id'] = $users['user_id'];
 
             if ($users['role'] === 'admin') {
                 header('Location: read.php');
