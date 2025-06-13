@@ -1,5 +1,5 @@
 <?php # DISPLAY SHOPPING CART PAGE.
-
+session_start();
 # Set page title and display header section.
 include ('../Includes/session-cart.php');
 
@@ -26,8 +26,8 @@ $total = 0;
 if (!empty($_SESSION['cart']))
 {
   # Connect to the database.
-  require ('connect_db.php');
-  
+  require ('../Includes/connect_db.php');
+
   # Retrieve all items in the cart from the 'products' database table.
   $q = "SELECT * FROM products WHERE item_id IN (";
   foreach ($_SESSION['cart'] as $id => $value) { $q .= $id . ','; }

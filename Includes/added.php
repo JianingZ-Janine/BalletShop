@@ -1,17 +1,21 @@
 <?php
 
-include('../BalletShop/Includes/session-cart.php');
+include('../Includes/session-cart.php');
 
 if (isset($_GET['id']))
     $id = $_GET['id'];
 
-require('../BalletShop/Includes/connect_db.php');
+// connect to the database    
+ob_start();
+require('../Includes/connect_db.php');
+ob_end_clean(); // discard the output 'Connected to the database successfully!' 
 
 $q = "SELECT * FROM products WHERE item_id = $id";
 $r = mysqli_query($link, $q);
 if (mysqli_num_rows($r) == 1) {
     $row = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
+    # Check if cart already contains one of this product id.
     if (!isset($_SESSION['cart'][$id])) {
         ## Add 1+ quantity of this product to the cart.
         $_SESSION['cart'][$id]['quantity']++;
@@ -45,6 +49,6 @@ if (mysqli_num_rows($r) == 1) {
 
 # Close database connection.
 mysqli_close($link);
-include('Includes/footer.html');
+include('../Includes/footer.html');
 ?>
 
