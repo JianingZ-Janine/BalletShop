@@ -16,7 +16,7 @@ if (mysqli_num_rows($r) == 1) {
     $row = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
     # Check if cart already contains one of this product id.
-    if (!isset($_SESSION['cart'][$id])) {
+    if (isset($_SESSION['cart'][$id])) {
         ## Add 1+ quantity of this product to the cart.
         $_SESSION['cart'][$id]['quantity']++;
         echo '
@@ -41,7 +41,7 @@ if (mysqli_num_rows($r) == 1) {
 					<span aria-hidden="true">&times;</span>
 				</button>
 				<p>A ' . $row["item_name"] . ' has been added to your cart</p>
-			<a href="home.php">Continue Shopping</a> | <a href="cart.php">View Your Cart</a>
+			<a href="user.php">Continue Shopping</a> | <a href="cart.php">View Your Cart</a>
 			</div>
 		</div>';
   }
