@@ -47,7 +47,7 @@ if (isset($_GET['total']) && ($_GET['total'] > 0) && (!empty($_SESSION['cart']))
 
     # Display the order number. 
     echo '
-<div class="container" style="margin-top: 140px;">
+<div class="container" style="margin-top: 140px;margin-bottom: 420px;">
   <div class="alert alert-secondary" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
@@ -65,7 +65,7 @@ if (isset($_GET['total']) && ($_GET['total'] > 0) && (!empty($_SESSION['cart']))
 # Or display an error message.
 else {
     echo '
-    <div class="container" style="margin-top: 140px;">
+    <div class="container" style="margin-top: 140px; margin-bottom: 420px;">
   <div class="alert alert-danger" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
@@ -75,4 +75,7 @@ else {
   </div>
 </div>';
 }
+
+# Display footer section.
+include('../Includes/footer.php');
 ?>

@@ -56,7 +56,7 @@ if (empty($errors)) {
 }
 ?>
 
-<div class="container">
+<div class="container mt-5 mb-5">
 <h1>Update Item</h1>
 	<form action="update.php" method="post" >
       <!-- input box for item id -->
@@ -110,4 +110,4 @@ if (empty($errors)) {
 	</form>
 </div>
 
-<?php include('../Includes/footer.html'); ?>
+<?php include('../Includes/footer.php'); ?>

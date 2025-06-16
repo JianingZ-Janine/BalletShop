@@ -49,8 +49,7 @@ if (!empty($_SESSION['cart'])) {
               <div class="col-lg-8">
                 <div class="p-5">
                   <div class="d-flex justify-content-between align-items-center mb-5">
-                    <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
-                    
+                    <h3 class="fw-bold mb-0 text-black">Shopping Cart</h3>
                   </div>
                   <hr class="my-4">
 					<form action="cart.php" method="post">';
@@ -60,11 +59,11 @@ if (!empty($_SESSION['cart'])) {
     $total += $subtotal;
 
     # Display the row/s:
-    echo "<div class=\"row mb-12 d-flex justify-content-between align-items-center\">
+    echo "<div class=\"row mb-3 d-flex justify-content-between align-items-center\">
            <div class=\"col-md-3 col-lg-3 col-xl-3\">
 			<img src=\"{$row['item_img']}\"
                  class=\"img-fluid rounded-3\" 
-				 alt=\"Cotton T-shirt\">
+				 alt=\"product\">
 		    </div>
 			<div class=\"col-md-3 col-lg-3 col-xl-3\">
              <h6 class=\"text-black mb-0\">{$row['item_name']}</h6>
@@ -103,11 +102,13 @@ if (!empty($_SESSION['cart'])) {
                 </div>
               <h5 class="text-uppercase mb-3 text-right border-y-2 border-black py-2">Total:  &pound; ' . number_format($total + ($total > 50 ? 0 : 2.99), 2) . '</h5>
               <a href="checkout.php?total=' . ($total + ($total > 50 ? 0 : 2.99)) . '" class="btn btn-dark btn-block w-100">Proceed to checkout</a>
+              <a href="user.php" class="btn btn-outline-dark btn-block w-100">Continue Shopping</a>
             </div>
           </div>
         </div>
       </div>
   </form>';
+  echo '</div></div></div></div>'; // Close row and container
 } else
 # Or display a message.
 {
@@ -130,6 +131,6 @@ if (!empty($_SESSION['cart'])) {
 
 
 # Display footer section.
-include('../Includes/footer.html');
+include('../Includes/footer.php');
 
 ?>

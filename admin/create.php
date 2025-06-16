@@ -75,7 +75,7 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
 include '../Includes/nav.php'; // Include the navigation bar
 ?>
 
-<div class="container">
+<div class="container mb-5 mt-5">
   <h1>Add Item</h1>
   <?php
   if (isset($errors) && !empty($errors)) {
@@ -130,6 +130,6 @@ include '../Includes/nav.php'; // Include the navigation bar
 	</form>
 </div>
 
-<?php include('../Includes/footer.html'); ?>
+<?php include('../Includes/footer.php'); ?>
 </body>
 </html>

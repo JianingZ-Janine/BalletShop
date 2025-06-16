@@ -20,22 +20,22 @@ if (mysqli_num_rows($r) == 1) {
         ## Add 1+ quantity of this product to the cart.
         $_SESSION['cart'][$id]['quantity']++;
         echo '
-   <div class="container" style="margin-top: 100px;">
-   <div class="alert alert-secondary" role="alert">
-   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-     <span aria-hidden="true">&times;</span>
-     </button>
-     <p> Another ' . $row['item_name'] . ' has been added to your cart.</p>
-     <a href="user.php"> Continue Shopping</a> | <a href="cart.php"> View Cart</a>
+   <div class="container md-5" style="margin-top: 100px;margin-bottom: 420px;">
+     <div class="alert alert-secondary" role="alert">
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+       <p>Another ' . $row['item_name'] . ' has been added to your cart.</p>
+       <a href="user.php">Continue Shopping</a> | <a href="cart.php">View Cart</a>
      </div>
-     </div>
+   </div>
    ';
     }
      else
   {
     # Or add one of this product to the cart.
     $_SESSION['cart'][$id] = array('quantity' => 1, 'price' => $row['item_price']);
-    echo '<div class="container" style="margin-top: 100px;">
+    echo '<div class="container md-5" style="margin-top: 100px;margin-bottom: 420px;">
 			<div class="alert alert-secondary" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -49,6 +49,6 @@ if (mysqli_num_rows($r) == 1) {
 
 # Close database connection.
 mysqli_close($link);
-include('../Includes/footer.html');
+include('../Includes/footer.php');
 ?>
 
