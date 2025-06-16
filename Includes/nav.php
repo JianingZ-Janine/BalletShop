@@ -10,15 +10,15 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/bb3ef965c3.js" crossorigin="anonymous"></script> 
+  <script src="https://kit.fontawesome.com/bb3ef965c3.js" crossorigin="anonymous"></script>
 </head>
 
- <style>
-    .card {
-      margin-top: 30px;
-      margin-bottom: 20px;
-    }
-  </style>
+<style>
+  .card {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+</style>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
