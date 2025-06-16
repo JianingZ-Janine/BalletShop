@@ -39,12 +39,13 @@ if (mysqli_num_rows($r) > 0) {
 	</div>
   </div>';
     }
+	echo '</div></div>'; // Close row and container
 } else {
     echo '<p> Product Not Found.</p>';
 }
 # Close database connection.
 mysqli_close($link);
 
-include('../Includes/footer.html');
+include('../Includes/footer.php');
 ?>
 

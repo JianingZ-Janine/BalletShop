@@ -111,13 +111,21 @@ if (!empty($_SESSION['cart'])) {
 } else
 # Or display a message.
 {
-  echo '<div class="alert alert-secondary" role="alert">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<p>Your cart is currently empty.</p>
-				</div>
-		</div>';
+  echo '<section class="h-100 h-custom" style="background-color:rgb(251, 234, 234);">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12">
+                    <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                        <div class="card-body p-5 text-center">
+                            <h1 class="fw-bold mb-4 text-black">Your Shopping Cart is Empty</h1>
+                            <p class="text-muted mb-4">It looks like you haven\'t added any items yet. Explore our products to find something you love!</p>
+                            <a href="user.php" class="btn btn-dark btn-lg">Browse Products</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>';
 }
 
 
