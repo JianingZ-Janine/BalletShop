@@ -20,7 +20,7 @@ if (mysqli_num_rows($r) == 1) {
         ## Add 1+ quantity of this product to the cart.
         $_SESSION['cart'][$id]['quantity']++;
         echo '
-   <div class="container">
+   <div class="container" style="margin-top: 100px;">
    <div class="alert alert-secondary" role="alert">
    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
      <span aria-hidden="true">&times;</span>
@@ -35,7 +35,7 @@ if (mysqli_num_rows($r) == 1) {
   {
     # Or add one of this product to the cart.
     $_SESSION['cart'][$id] = array('quantity' => 1, 'price' => $row['item_price']);
-    echo '<div class="container">
+    echo '<div class="container" style="margin-top: 100px;">
 			<div class="alert alert-secondary" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
