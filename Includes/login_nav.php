@@ -10,7 +10,19 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/bb3ef965c3.js" crossorigin="anonymous"></script>
+    <style>
+        .banner-fixed {
+            position: fixed;
+            top: 56px;
+            /* Height of Bootstrap fixed-top navbar */
+            left: 0;
+            width: 100%;
+            z-index: 1039;
+            /* Just below the navbar (1040) */
+            background-color:rgb(244, 214, 220);
+        }
+    </style>
 </head>
 
 <body>
@@ -25,23 +37,30 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Support <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">Sales</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Brand Story</a>
+                    <a class="nav-link" href="#">Gifts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
                 </li>
             </ul>
             <div class="ml-auto">
-                <a href="../Includes/login.php" class="btn btn-outline-primary ml-1">Sign in</a>
+                <a href="../Includes/login.php" class="btn btn-outline-dark ml-1"><i class="fa fa-user fa-fw" aria-hidden="true"></i> Sign in</a>
             </div>
         </div>
     </nav>
- <!--Display Free Delivery Option-->
-   <div class="banner w-100 text-center py-2">
-       <p class="text-dark mb-0 font-weight-medium">Free delivery on orders over £50!</p>
-   </div>
+    <!--Display Free Delivery Option-->
+    <div class="banner banner-fixed">
+        <p class="text-dark mb-0 font-weight-medium">Free delivery on orders over £50!</p>
+    </div>
 </body>
+
 </html>

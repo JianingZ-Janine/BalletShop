@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../Includes/nav.html');
+include('../Includes/nav.php');
 ?>
 
 
@@ -10,11 +10,6 @@ ob_start();
 require('../Includes/connect_db.php');
 ob_end_clean(); // discard the output 'Connected to the database successfully!' 
 ?>
-
-<div class="container text-center mt-5 mb-5">
-	<h1>Welcome, <span><?= $_SESSION['first_name'] ?></span></h1>
-    <button class="btn btn-dark" onclick="window.location.href='../Includes/logout.php'">Logout</button>
-</div>
 
 <?php
 # Retrieve all products from the database.

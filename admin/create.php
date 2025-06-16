@@ -72,7 +72,7 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
 </head>
 <body>
 <?php
-include '../Includes/nav.html';
+include '../Includes/nav.php'; // Include the navigation bar
 ?>
 
 <div class="container">

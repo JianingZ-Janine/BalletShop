@@ -1,5 +1,5 @@
 <?php
-include('../Includes/nav.html');
+include('../Includes/nav.php');
 if ( $_SERVER [ 'REQUEST_METHOD' ] == 'POST' ) {
     require('connect_db.php');
 }
