@@ -36,7 +36,7 @@ if (isset($_POST['login'])) {
             $_SESSION['user_id'] = $users['user_id'];
 
             if ($users['role'] === 'admin') {
-                header('Location: ../Includes/read.php');
+                header('Location: ../admin/read.php');
             } else {
                 header('Location: ../Includes/user.php');
             }

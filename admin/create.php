@@ -2,7 +2,7 @@
 if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
 	{
 	  # Connect to the database.
-	  require ('connect_db.php'); 
+	  require ('../Includes/connect_db.php'); 
 
   # Initialize an error array.
   $errors = array();
@@ -39,7 +39,7 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
 	VALUES ('$n','$d', '$img', '$p' )";
     $r = @mysqli_query ( $link, $q );
     if ($r)
-    header("Location: ../Includes/read.php");
+    header("Location: ../admin/read.php");
   
     # Close database connection.
     mysqli_close($link); 
