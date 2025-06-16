@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once 'connect_db.php';
+require_once '../Includes/connect_db.php';
 
 if (isset($_POST['register'])) {
     $first_name = $_POST['first_name'];
@@ -36,9 +36,9 @@ if (isset($_POST['login'])) {
             $_SESSION['user_id'] = $users['user_id'];
 
             if ($users['role'] === 'admin') {
-                header('Location: read.php');
+                header('Location: ../Includes/read.php');
             } else {
-                header('Location: user.php');
+                header('Location: ../Includes/user.php');
             }
             exit();
         }

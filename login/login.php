@@ -1,7 +1,7 @@
 <body>
 
 <?php
-include('../includes/login_nav.php');
+include('../Includes/login_nav.php');
 ?>
 
 
