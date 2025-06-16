@@ -13,6 +13,15 @@
     margin: 0 15px;
 }
 
+/* Center the form in the middle of the page */
+.container-fluid {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    background: #f8f9fa;     /* Optional: light background */
+}
+
 .form-box {
     width: 100%;
     max-width: 450px;

@@ -1,7 +1,7 @@
 <body>
 
 <?php
-include('../includes/nav.html');
+include('../includes/login_nav.php');
 ?>
 
 
@@ -29,13 +29,13 @@ function isActiveForm ($formName, $activeForm) {
 
 
 <!-- Display body section. -->
-<div class="container">
+<div class="container-fluid">
 	<div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
 		<form action="login_register.php" method="post">
 			<h2>Login</h2>
 			<?= showError($errors['login']); ?>
-			<input type="text" name="email" placeholder="Email" required>
-			<input type="pass" name="pass" placeholder="Password" required>
+				<input type="text" name="email" placeholder="Email" required>
+				<input type="pass" name="pass" placeholder="Password" required>
 			<button type="submit" name="login">Login</button>
 			<p>Don't have an account? <a href="#" onclick="showForm('register-form')">Register</a></p>
 		</form>
