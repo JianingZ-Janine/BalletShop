@@ -59,7 +59,7 @@ function isActiveForm ($formName, $activeForm) {
 	</div>
 </div>
 
-<script src="script.js"></script>
+<script src="../Includes/script.js"></script>
 
 
 
