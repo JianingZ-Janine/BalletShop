@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center; /* Horizontal center */
     align-items: center;     /* Vertical center */
-    background: #fdf5fa;     /* Optional: light background */
+    background: #fcf8fb;     /* Optional: light background */
 }
 
 .form-box {
