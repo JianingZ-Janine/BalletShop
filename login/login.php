@@ -35,7 +35,7 @@ function isActiveForm ($formName, $activeForm) {
 			<h2>Login</h2>
 			<?= showError($errors['login']); ?>
 				<input type="text" name="email" placeholder="Email" required>
-				<input type="pass" name="pass" placeholder="Password" required>
+				<input type="password" name="pass" placeholder="Password" required>
 			<button type="submit" name="login">Login</button>
 			<p>Don't have an account? <a href="#" onclick="showForm('register-form')">Register</a></p>
 		</form>
@@ -47,7 +47,7 @@ function isActiveForm ($formName, $activeForm) {
 			<input type="text" name="first_name" placeholder="First Name" required>
 			<input type="text" name="last_name" placeholder="Last Name" required>
 			<input type="text" name="email" placeholder="Email" required>
-			<input type="pass" name="pass" placeholder="Password" required>
+			<input type="password" name="pass" placeholder="Password" required>
 			<select name="role" required>
 				<option value="" disabled selected>Select Role</option>
 				<option value="user">User</option>
