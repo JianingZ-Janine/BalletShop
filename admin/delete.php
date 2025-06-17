@@ -1,6 +1,6 @@
 <?php
 # Open database connection.
-require ( 'connect_db.php' );
+require ( '../Includes/connect_db.php' );
 
 if (isset($_GET['item_id'])) {
     $id = $_GET['item_id'];

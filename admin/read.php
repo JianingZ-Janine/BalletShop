@@ -3,6 +3,13 @@ session_start();
 include('../Includes/nav.php');
 ?>
 
+<?php
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../login/login.php"); // Redirect to login page
+    exit();
+}
+?>
 
 <?php
 # Open database connection.
